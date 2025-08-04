@@ -1,0 +1,16 @@
+{{ define "base" }}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    {{ template "head" }}
+  </head>
+  <body>
+    <div id="strip">
+      {{ template "nav" . }}
+      <main>{{ template "content" . }}</main>
+      {{ template "footer" . }}
+    </div>
+    <script src="/static/js/index.js"></script>
+  </body>
+</html>
+{{ end }}

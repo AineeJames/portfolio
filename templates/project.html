@@ -1,0 +1,22 @@
+{{ define "content" }}
+  <ul class="tag-list">
+    {{ range .Tags }}
+    <li class="tag"><i data-lucide="tag" class="icon"></i>{{ . }}</li>
+    {{ end }}
+  </ul>
+  <div class="title-row">
+    <h1 class="proj-title">{{ .Title }}</h1>
+    <div class="proj-links">
+      {{ range .Links }}
+        <a href="{{ .Link }}" target="_blank" rel="noopener">
+          <i data-lucide="{{ .Name }}" class="icon"></i>
+        </a>
+      {{ end }}
+    </div>
+  </div>
+  <p class="proj-date">{{ .Date }}</p>
+  <hr class="dashed-divider">
+  <article>
+    {{ .Body }}
+  </article>
+{{ end }}
